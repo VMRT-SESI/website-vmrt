@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edição 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../styles/root.css" />
+    <link rel="stylesheet" href="../styles/edicao.css" />
+    <link rel="shortcut icon" href="../Images/VMRT.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav class="bg-neutral-900 text-white h-20 flex items-center justify-between px-6 relative">
+      <!-- Logo -->
+      <div>
+        <a href="./index.html">
+          <img src="../Images/VMRT.png" alt="logo" class="max-w-[45px]" />
+        </a>
+      </div>
+
+      <!-- Menu Toggle (Mobile) -->
+      <input type="checkbox" id="menu-toggle" class="peer hidden" />
+      <label for="menu-toggle" class="lg:hidden cursor-pointer text-2xl z-20">
+        <span class="text-white">&#9776;</span>
+      </label>
+
+      <!-- Menu Items -->
+      <ul
+        class="peer-checked:flex hidden lg:flex flex-col lg:flex-row absolute lg:static top-20 left-0 w-full lg:w-auto bg-neutral-800 lg:bg-transparent z-10"
+      >
+        <li>
+          <a href="./index.html" class="block px-6 py-3 hover:text-orange-500 transition">Home</a>
+        </li>
+        <li>
+          <a href="./sobre.html" class="block px-6 py-3 hover:text-orange-500 transition">Sobre</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="group relative">
+          <a
+            href="./edicoes/edicao_2025.html"
+            class="block px-6 py-3 hover:text-orange-500 transition flex items-center"
+          >
+            Edição <span class="ml-1">&#9662;</span>
+          </a>
+          <ul
+            class="hidden group-hover:block lg:absolute bg-neutral-700 w-44 z-20 lg:top-full"
+          >
+            <li>
+              <a
+                href="./edicoes/edicao_2024.html"
+                class="block px-4 py-2 hover:bg-gray-200 hover:text-neutral-800 transition"
+                >Edição 2024</a
+              >
+            </li>
+            <li>
+              <a
+                href="./edicoes/edicao_2023.html"
+                class="block px-4 py-2 hover:bg-gray-200 hover:text-neutral-800 transition"
+                >Edição 2023</a
+              >
+            </li>
+            <li>
+              <a
+                href="./edicoes/edicao_2025.html"
+                class="block px-4 py-2 hover:bg-gray-200 hover:text-neutral-800 transition"
+                >Edição 2025</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="./galeria.html" class="block px-6 py-3 hover:text-orange-500 transition">Galeria</a>
+        </li>
+        <li>
+          <a href="./contatos.html" class="block px-6 py-3 hover:text-orange-500 transition">Contatos</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <main>
+      <section class="v4_01">
+        <h1>Em desenvolvimento...</h1>
+        <p class="v4_11_paragraph">
+          Nossas equipes estão se preparando para os desafios propostos na
+          temporada 2024-2025 da FLL, a "Submerged".
+        </p>
+      </section>
+    </main>
+    <script src="../script/menu.js"></script>
+  </body>
+</html>
