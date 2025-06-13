@@ -12,7 +12,7 @@ export default function Page() {
             </h1>
             <p className="mt-4 text-lg max-w-md">
               As equipes foram desafiadas a mergulhar fundo na temporada
-              2024-2025 da FLL, a "Submerged", explorando os mistérios do oceano
+              2024-2025 da FLL, a &quot;Submerged&quot;, explorando os mistérios do oceano
               e propondo soluções inovadoras para problemas reais enfrentados
               por comunidades costeiras e pela vida marinha.
             </p>

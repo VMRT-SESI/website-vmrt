@@ -12,7 +12,7 @@ export default function Page() {
             </h1>
             <p className="mt-4 text-lg">
               Nossas equipes são desafiadas a realizar os desafios propostos na
-              temporada 2023-2024 da FLL, a "Masterpiece".
+              temporada 2023-2024 da FLL, a &quot;Masterpiece&quot;.
             </p>
           </div>
           <iframe
