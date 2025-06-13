@@ -1,1 +1,0 @@
-# new-torneio-vmrt-web
