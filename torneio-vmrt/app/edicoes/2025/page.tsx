@@ -33,7 +33,7 @@ export default function Page() {
         <hr className="w-3/4 border-2 border-orange-vibrant mx-auto" />
 
         <p className="text-center text-lg max-w-3xl mx-auto">
-          A temporada "Submerged" convida os competidores a mergulharem nos
+          A temporada &ldquo;Submerged&rdquo; convida os competidores a mergulharem nos
           ecossistemas marinhos e explorarem formas de proteger a
           biodiversidade, restaurar habitats submersos e entender os impactos
           ambientais causados pelas ações humanas.
