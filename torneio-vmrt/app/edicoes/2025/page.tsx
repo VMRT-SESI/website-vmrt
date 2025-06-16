@@ -51,18 +51,26 @@ export default function Page() {
             </h2>
             <div className="mt-6">
               <h3 className="text-xl font-semibold text-orange-400 mb-2">
-                Torneio Interno FLL VMRT
+                Torneio VMRT - Interno
               </h3>
               <ul className="list-[armenian] list-inside space-y-1">
-                <li>The Bubbles Squad</li>
+                <li>Legends Wolf</li>
+                <li>Magic Bloom</li>
                 <li>Robótica IA Teens</li>
+                <li>SESI Stars</li>
+                <li>The Bubbles Squad</li>
               </ul>
             </div>
             <div className="mt-6">
               <h3 className="text-xl font-semibold text-orange-400 mb-2">
-                Torneio Externo FLL VMRT
+                Torneio VMRT - Externo
               </h3>
               <ul className="list-[armenian] list-inside space-y-1">
+                <li>BB8</li>
+                <li>MORVAN</li>
+                <li>Santllers</li>
+                <li>Tech Ninjas</li>
+                <li>TECHNOBOT</li>
                 <li>VMRT</li>
               </ul>
             </div>
