@@ -58,7 +58,7 @@ export default function Page() {
               <ul className="list-[armenian] list-inside space-y-1">
                 <li>Legends Wolf</li>
                 <li>Magic Bloom</li>
-                <li>Robótica IA Teens</li>
+                <li>Robótica I.A. Teens</li>
                 <li>SESI Stars</li>
                 <li>The Bubbles Squad</li>
               </ul>
@@ -102,6 +102,71 @@ export default function Page() {
             alt="Submerged logo"
             className="w-28 sm:w-36 h-auto mt-6 md:mt-0 md:ml-8"
           />
+        </section>
+
+        {/* Vencedores */}
+        <section className="text-center space-y-6">
+          <h2 className="text-3xl font-extrabold text-orange-500 tracking-tight drop-shadow-sm">
+            🏆 Vencedores
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center gap-10 text-left">
+            {/* Torneio Interno */}
+            <div className="bg-[#121212] rounded-xl shadow-lg p-6 min-w-[270px] border-t-4 border-orange-400">
+              <h4 className="text-xl font-semibold text-orange-400 mb-4 flex items-center gap-2">
+                <span className="inline-block w-2 h-2 bg-orange-400 rounded-full" /> Torneio Interno
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <span className="font-bold text-orange-500">Champions Awards:</span>{" "}
+                  <span className="font-semibold text-white">SESI Stars</span>
+                </li>
+                <li>
+                  <span className="font-bold text-orange-500">Desafio de Mesa:</span>{" "}
+                  <span className="font-semibold text-white">Magic Bloom</span>
+                </li>
+                <li>
+                  <span className="font-bold text-orange-500">Projeto de Inovação:</span>{" "}
+                  <span className="font-semibold text-white">Legends Wolf</span>
+                </li>
+                <li>
+                  <span className="font-bold text-orange-500">Design do Robô:</span>{" "}
+                  <span className="font-semibold text-white">Robótica I.A. Teen</span>
+                </li>
+                <li>
+                  <span className="font-bold text-orange-500">Core Values:</span>{" "}
+                  <span className="font-semibold text-white">SESI Stars</span>
+                </li>
+              </ul>
+            </div>
+            {/* Torneio Externo */}
+            <div className="bg-[#121212] rounded-xl shadow-lg p-6 min-w-[270px] border-t-4 border-pink-500">
+              <h4 className="text-xl font-semibold text-pink-500 mb-4 flex items-center gap-2">
+                <span className="inline-block w-2 h-2 bg-pink-500 rounded-full" /> Torneio Externo
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <span className="font-bold text-pink-600">Champions Awards:</span>{" "}
+                  <span className="font-semibold text-white">BB8</span>
+                </li>
+                <li>
+                  <span className="font-bold text-pink-600">Desafio de Mesa:</span>{" "}
+                  <span className="font-semibold text-white">Santllers</span>
+                </li>
+                <li>
+                  <span className="font-bold text-pink-600">Projeto de Inovação:</span>{" "}
+                  <span className="font-semibold text-white">MORVAN</span>
+                </li>
+                <li>
+                  <span className="font-bold text-pink-600">Design do Robô:</span>{" "}
+                  <span className="font-semibold text-white">BB8</span>
+                </li>
+                <li>
+                  <span className="font-bold text-pink-600">Core Values:</span>{" "}
+                  <span className="font-semibold text-white">VMRT</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* Seção de datas e local */}
