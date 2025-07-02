@@ -11,6 +11,10 @@ export default function Home() {
     { src: "/carrossel/3.png", alt: "Imagem 3" },
     { src: "/carrossel/4.png", alt: "Imagem 4" },
     { src: "/carrossel/5.png", alt: "Imagem 5" },
+    { src: "/carrossel/6.png", alt: "Imagem 6" },
+    { src: "/carrossel/7.png", alt: "Imagem 7" },
+    { src: "/carrossel/8.png", alt: "Imagem 8" },
+    { src: "/carrossel/9.png", alt: "Imagem 9" },
   ];
 
   return (
@@ -29,7 +33,7 @@ export default function Home() {
 
         <div className="rounded-3xl overflow-hidden shadow-2xl mb-12">
           <Image
-            src="/carrossel/1.png"
+            src="/default.png"
             alt="Imagem de destaque"
             width={1200}
             height={600}
@@ -62,10 +66,6 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-semibold text-orange-400 mb-4 text-center">
             Galeria de Imagens
           </h2>
-          <p className="text-lg text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-            Veja registros incríveis das edições anteriores do torneio e das
-            equipes participantes.
-          </p>
           <ImageCarousel images={imagens} />
         </section>
       </main>

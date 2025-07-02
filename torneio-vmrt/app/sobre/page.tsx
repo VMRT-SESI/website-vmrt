@@ -17,7 +17,7 @@ export default function Sobre() {
         {/* Seção introdutória */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
           <Image
-            src="/fotos/foto1.jpeg"
+            src="/carrossel/8.png"
             alt="Sobre o Torneio VMRT"
             width={500}
             height={350}

@@ -8,17 +8,41 @@ export default function Galeria() {
       <NavBar />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-        {/* Mensagem de espera */}
-        <div className="bg-orange-100 border border-orange-300 rounded-2xl px-2 py-6 text-center shadow-lg max-w-3xl mx-auto">
-          <p className="text-4xl font-bold text-orange-vibrant">
-            Calma aí, robô!
-          </p>
-          <p className="text-lg mt-4 text-zinc-700">
-            As fotos do Torneio VMRT 2025 serão divulgadas a partir do dia{" "}
-            <span className="font-semibold text-orange-500">28 de Junho</span>.
-            Aguarde só mais um pouquinho robozinho.
-          </p>
-        </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transform transition-transform hover:scale-105 cursor-not-allowed"
+            >
+              <Image
+                src="/albums/2.png"
+                alt="Álbum de fotos do Torneio VMRT 2024"
+                width={500}
+                height={350}
+                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
+              />
+              <p className="mt-2 text-center text-zinc-100 font-medium">
+                Torneio VMRT 2025 (Externo)
+              </p>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transform transition-transform hover:scale-105 cursor-not-allowed"
+            >
+              <Image
+                src="/albums/3.png"
+                alt="Álbum de fotos do Torneio VMRT 2024"
+                width={500}
+                height={350}
+                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
+              />
+              <p className="mt-2 text-center text-zinc-100 font-medium">
+                Torneio VMRT 2025 (Interno)
+              </p>
+            </a>
+            </div>
 
         {/* Outros álbuns */}
         <div>
@@ -40,7 +64,7 @@ export default function Galeria() {
                 className="rounded-2xl w-full h-auto group-hover:shadow-orange-300"
               />
               <p className="mt-2 text-center text-zinc-100 font-medium">
-                Torneio VMRT 2024 (Interno)
+                Torneio VMRT 2024 (Externo)
               </p>
             </a>
 
@@ -58,7 +82,7 @@ export default function Galeria() {
                 className="rounded-2xl w-full h-auto group-hover:shadow-orange-300"
               />
               <p className="mt-2 text-center text-zinc-100 font-medium">
-                Torneio VMRT 2024 (Externo)
+                Torneio VMRT 2024 (Interno)
               </p>
             </a>
 
