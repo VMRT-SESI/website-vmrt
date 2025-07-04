@@ -13,14 +13,14 @@ export default function Galeria() {
               href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Externo?csf=1&web=1&e=HyRbSf"
               target="_blank"
               rel="noopener noreferrer"
-              className="group transform transition-transform hover:scale-105 cursor-not-allowed"
+              className="group transform transition-transform hover:scale-105"
             >
               <Image
                 src="/albums/2.png"
                 alt="Álbum de fotos do Torneio VMRT 2025"
                 width={500}
                 height={350}
-                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
+                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300"
               />
               <p className="mt-2 text-center text-zinc-100 font-medium">
                 Torneio VMRT 2025 (Externo)
@@ -31,14 +31,14 @@ export default function Galeria() {
               href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Interno?csf=1&web=1&e=PAt8hZ"
               target="_blank"
               rel="noopener noreferrer"
-              className="group transform transition-transform hover:scale-105 cursor-not-allowed"
+              className="group transform transition-transform hover:scale-105"
             >
               <Image
                 src="/albums/3.png"
                 alt="Álbum de fotos do Torneio VMRT 2025"
                 width={500}
                 height={350}
-                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
+                className="rounded-2xl w-full h-auto group-hover:shadow-orange-300"
               />
               <p className="mt-2 text-center text-zinc-100 font-medium">
                 Torneio VMRT 2025 (Interno)
