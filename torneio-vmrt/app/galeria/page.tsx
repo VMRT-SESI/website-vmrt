@@ -10,13 +10,14 @@ export default function Galeria() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <a
+              href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Externo?csf=1&web=1&e=HyRbSf"
               target="_blank"
               rel="noopener noreferrer"
               className="group transform transition-transform hover:scale-105 cursor-not-allowed"
             >
               <Image
                 src="/albums/2.png"
-                alt="Álbum de fotos do Torneio VMRT 2024"
+                alt="Álbum de fotos do Torneio VMRT 2025"
                 width={500}
                 height={350}
                 className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
@@ -27,13 +28,14 @@ export default function Galeria() {
             </a>
 
             <a
+              href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Interno?csf=1&web=1&e=PAt8hZ"
               target="_blank"
               rel="noopener noreferrer"
               className="group transform transition-transform hover:scale-105 cursor-not-allowed"
             >
               <Image
                 src="/albums/3.png"
-                alt="Álbum de fotos do Torneio VMRT 2024"
+                alt="Álbum de fotos do Torneio VMRT 2025"
                 width={500}
                 height={350}
                 className="rounded-2xl w-full h-auto group-hover:shadow-orange-300 opacity-50 bg-white"
@@ -87,7 +89,7 @@ export default function Galeria() {
             </a>
 
             <a
-              href="#"
+              href="https://photos.app.goo.gl/WS5V7GMMHUcyTQRK6"
               className="group transform transition-transform hover:scale-105"
             >
               <Image
