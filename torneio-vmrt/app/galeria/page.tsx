@@ -10,7 +10,7 @@ export default function Galeria() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <a
-              href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Externo?csf=1&web=1&e=HyRbSf"
+              href="https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EkYDVxEPhsNCsjSShbzDY20BSOS9COmx8IgH1NgGrPliiQ?e=yq215V"
               target="_blank"
               rel="noopener noreferrer"
               className="group transform transition-transform hover:scale-105"
@@ -28,7 +28,7 @@ export default function Galeria() {
             </a>
 
             <a
-              href="https://sesisenaispedu-my.sharepoint.com/:f:/r/personal/bruno_almeida35_portalsesisp_org_br/Documents/Torneio%202025/Interno?csf=1&web=1&e=PAt8hZ"
+              href="https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EqD5N1pm8mNKgrCfTbxGiesBNpFBvKEvMFjGg11bBjYENw?e=u93KZC"
               target="_blank"
               rel="noopener noreferrer"
               className="group transform transition-transform hover:scale-105"
