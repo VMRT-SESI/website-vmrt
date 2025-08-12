@@ -3,8 +3,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(to top, #121212 0%, #1c1c1c 100%);
+  --foreground: #ededed;
   --orange-vibrant: #ff8a00;
 }
 
@@ -14,14 +14,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-orange-vibrant: var(--orange-vibrant);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: linear-gradient(to top, #121212 0%, #1c1c1c 100%);
-    --foreground: #ededed;
-    --orange-vibrant: #ff8a00;
-  }
 }
 
 body {
