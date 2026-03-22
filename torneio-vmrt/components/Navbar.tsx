@@ -1,118 +1,140 @@
 "use client";
 
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
 
-export default function SideBar() {
-  const pathname = usePathname();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [edicoesOpen, setEdicoesOpen] = useState(false);
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
 
-  const links = [
-    { name: "Início", href: "/" },
-    { name: "Sobre", href: "/sobre" },
-    { name: "Galeria", href: "/galeria" },
-    { name: "Contatos", href: "/contatos" },
-  ];
+  // trava scroll quando menu abre
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
 
   return (
     <>
-      {/* Botão mobile flutuante */}
-      {!sidebarOpen && (
-        <button
-          className="fixed top-4 left-4 z-[9999] bg-orange-500 p-2 rounded-full text-white md:hidden"
-          onClick={() => setSidebarOpen(true)}
-        >
-          <Menu />
-        </button>
-      )}
-
-      {/* Sidebar mobile ou nav desktop */}
-      <nav
-        className={`fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-full bg-[#121212] md:bg-transparent z-[9998] p-6 md:p-4 transition-transform duration-300 ease-in-out transform ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 md:flex md:items-center md:justify-between md:flex-row`}
-      >
-        {/* Header da sidebar/mobile */}
-        <div className="flex items-center justify-between mb-6 md:mb-0">
-          <div className="h-10 w-10 relative">
-            <Image
-              src="/Logo_VMRT_principal.png"
-              alt="Logo"
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
+      <div className="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
+        {/* LEFT */}
+        <div className="navbar-start">
           <button
-            className="md:hidden text-white"
-            onClick={() => setSidebarOpen(false)}
+            className="btn btn-ghost lg:hidden"
+            onClick={() => setOpen(true)}
           >
-            <X />
+            ☰
           </button>
+
+          <Link
+            href="/"
+            className="flex items-center font-bold text-2xl hover:text-primary transition-colors"
+          >
+            <img
+              src="/Logo_VMRT_principal.png"
+              className="w-8 h-8 mr-4"
+              alt="VMRT"
+            />
+            VMRT
+          </Link>
         </div>
 
-        {/* Links principais */}
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-6 relative">
-          {links.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                onClick={() => setSidebarOpen(false)}
-                className={`block text-white font-medium px-2 py-1 rounded hover:bg-orange-500 hover:text-black transition ${
-                  pathname === link.href ? "text-orange-400 font-bold" : ""
-                }`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-
-          {/* Edições com submenu em todas as telas */}
-          <li className="relative">
-            <button
-              onClick={() => setEdicoesOpen(!edicoesOpen)}
-              className={`w-full text-left text-white font-medium flex items-center justify-between px-2 py-1 rounded hover:bg-orange-500 hover:text-black transition ${
-                pathname.startsWith("/edicoes") ? "text-orange-400 font-bold" : ""
-              }`}
-            >
-              Edições
-              <ChevronDown
-                className={`ml-1 transition-transform duration-200 ${
-                  edicoesOpen ? "rotate-180" : ""
-                }`}
-                size={18}
-              />
-            </button>
-
-            {edicoesOpen && (
-              <ul
-                className={`flex flex-col gap-1 bg-[#1e1e1e] rounded-md shadow-lg mt-2 z-50 ${
-                  // mobile: estático | desktop: absoluto
-                  sidebarOpen ? "pl-4" : "absolute left-0 top-full w-40"
-                }`}
-              >
-                {["2023", "2024", "2025"].map((year) => (
-                  <li key={year}>
-                    <Link
-                      href={`/edicoes/${year}`}
-                      onClick={() => setSidebarOpen(false)}
-                      className="block text-white text-sm px-4 py-2 rounded hover:bg-orange-500 hover:text-black transition"
-                    >
-                      {year}
-                    </Link>
+        {/* DESKTOP */}
+        <div className="navbar-end hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Torneio VMRT</summary>
+                <ul className="p-2 bg-base-100">
+                  <li>
+                    <Link href="/torneio/2026">Edição 2026</Link>
                   </li>
-                ))}
+                  <li>
+                    <Link href="/torneio/2025">Edição 2025</Link>
+                  </li>
+                  <li>
+                    <Link href="/torneio/2024">Edição 2024</Link>
+                  </li>
+                  <li>
+                    <Link href="/torneio/2023">Edição 2023</Link>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li>
+              <Link href="/galeria">Galeria</Link>
+            </li>
+            <li>
+              <Link href="/contato">Contato</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* OVERLAY */}
+      <div
+        className={`fixed inset-0 bg-black/40 transition-opacity duration-300 ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* MOBILE MENU */}
+      <div
+        className={`fixed top-0 left-0 h-full w-72 bg-base-100 shadow-xl z-50 transform transition-transform duration-300 ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="p-4 flex justify-between items-center border-b">
+          <span className="font-bold text-lg">Menu</span>
+          <button onClick={() => setOpen(false)}>✕</button>
+        </div>
+
+        <ul className="menu p-4 gap-2 w-full">
+          <li>
+            <Link href="/sobre" onClick={() => setOpen(false)}>
+              Sobre
+            </Link>
+          </li>
+
+          <li className="mt-2">
+            <details>
+              <summary>Torneio VMRT</summary>
+              <ul className="p-2 bg-base-100">
+                <li>
+                  <Link href="/torneio/2026" onClick={() => setOpen(false)}>
+                    Edição 2026
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/torneio/2025" onClick={() => setOpen(false)}>
+                    Edição 2025
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/torneio/2024" onClick={() => setOpen(false)}>
+                    Edição 2024
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/torneio/2023" onClick={() => setOpen(false)}>
+                    Edição 2023
+                  </Link>
+                </li>
               </ul>
-            )}
+            </details>
+          </li>
+
+          <li>
+            <Link href="/galeria" onClick={() => setOpen(false)}>
+              Galeria
+            </Link>
+          </li>
+          <li>
+            <Link href="/contato" onClick={() => setOpen(false)}>
+              Contato
+            </Link>
           </li>
         </ul>
-      </nav>
-
-      {/* Espaço adicional para empurrar conteúdo no mobile */}
-      <div className="md:ml-0" />
+      </div>
     </>
   );
 }

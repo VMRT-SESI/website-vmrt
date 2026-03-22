@@ -13,8 +13,8 @@ type CarouselProps = {
 
 export default function ImageCarousel({ images }: CarouselProps) {
   return (
-    <div className="w-full mx-auto rounded-2xl overflow-hidden shadow-lg mt-6">
-      <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+    <div className="w-full mx-auto rounded-2xl overflow-hidden shadow-lg">
+      <div className="relative w-full h-64 md:h-96">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
@@ -30,9 +30,8 @@ export default function ImageCarousel({ images }: CarouselProps) {
             src={img.src}
             alt={img.alt || `Slide ${index + 1}`}
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
-            sizes="100vw"
           />
         </SwiperSlide>
           ))}

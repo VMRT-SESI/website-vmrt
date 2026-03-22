@@ -15,8 +15,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Torneio VMRT",
-  description: "Torneio de Robótica da equipe VMRT",
+  title: "Equipe VMRT",
+  description: "Equipe de robótica VMRT",
 };
 
 export default function RootLayout({
