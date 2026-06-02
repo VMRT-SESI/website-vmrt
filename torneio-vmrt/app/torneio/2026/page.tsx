@@ -1,39 +1,34 @@
-import TournamentComingSoon from "@/components/emBreve";
 import NavBar from "@/components/Navbar";
 
-const equipesInternas = ["Sem Nome", "Sem Nome", "Sem Nome", "Sem Nome"];
+const equipesInternas = ["Spider Squad", "Tecno Câmbio", "Faith and Dragons", "SBR", "Fire Dragon","Golder Experience", "Gothan Bat"];
 
-const equipesExternas = ["Sem Nome", "Sem Nome", "Sem Nome", "Sem Nome"];
+const equipesExternas = ["Asgard", "Tatubóticos", "Robonáticos", "VMRT", "Robot Hunters","TECNOBOT"];
 
 const vencedoresInterno = [
-  { categoria: "Champion’s Award", equipe: "SESI Stars" },
-  { categoria: "Desafio de Mesa", equipe: "Magic Bloom" },
-  { categoria: "Projeto de Inovação", equipe: "Legends Wolf" },
-  { categoria: "Design do Robô", equipe: "Robótica I.A. Teen" },
-  { categoria: "Core Values", equipe: "SESI Stars" },
+  { categoria: "Champion’s Award", equipe: "" },
+  { categoria: "Desafio de Mesa", equipe: "" },
+  { categoria: "Projeto de Inovação", equipe: "" },
+  { categoria: "Design do Robô", equipe: "" },
+  { categoria: "Core Values", equipe: "" },
 ];
 
 const vencedoresExterno = [
-  { categoria: "Champion’s Award", equipe: "BB8" },
-  { categoria: "Desafio de Mesa", equipe: "Santllers" },
-  { categoria: "Projeto de Inovação", equipe: "MORVAN" },
-  { categoria: "Design do Robô", equipe: "BB8" },
-  { categoria: "Core Values", equipe: "VMRT" },
+  { categoria: "Champion’s Award", equipe: "" },
+  { categoria: "Desafio de Mesa", equipe: "" },
+  { categoria: "Projeto de Inovação", equipe: "" },
+  { categoria: "Design do Robô", equipe: "" },
+  { categoria: "Core Values", equipe: "" },
 ];
 
 const estatisticas = [
-  { valor: "00", label: "Competidores" },
-  { valor: "00", label: "Robôs" },
-  { valor: "00", label: "Horas de torneio" },
+  { valor: "+70", label: "Competidores" },
+  { valor: "12", label: "Robôs" },
+  { valor: "+10", label: "Horas de torneio" },
 ];
 
 export default function Page() {
   return (
-    <TournamentComingSoon
-      editionLabel="Edição 2026"
-      title="Torneio VMRT 2026"
-      description="Estamos preparando os conteúdos desta edição com informações, equipes participantes, resultados e registros do evento."
-    />
+    <CommingSoon />
   );
 }
 
@@ -115,7 +110,7 @@ function CommingSoon() {
           <section className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-12 items-center">
             <div className="overflow-hidden rounded-[2rem] border border-base-300 bg-base-200 shadow-xl">
               <img
-                src="https://instagram.fcgh69-1.fna.fbcdn.net/v/t51.75761-15/491445340_18499531765020192_7399420943417135723_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=MzYxNDQ4MTcwNzI0MTQ4NjM1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4OTU3LnNkci5DMyJ9&_nc_ohc=mQg7R_y5U64Q7kNvwFfxXcq&_nc_oc=AdrRDDd_0w_Bki8BgUOaPIgm-PRvUxx92y_aYv-aQth9WKr_QKGxNCT5JY7VLmQywcF71UFWrCgO6RFTfpnHLnup&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh69-1.fna&_nc_gid=qZ_KUvGZXPYerLw-tx4Aww&_nc_ss=7a32e&oh=00_AfzTVmGZKLcszb1zIm6XW7r8RhmjWWFp0G4fdf0nMw5_DA&oe=69C5DACE"
+                src="https://qcesc.org/wp-content/uploads/2025/08/image001-1024x666.jpg"
                 alt="Desafio de mesa da temporada Unearthed"
                 className="w-full h-full max-h-[460px] object-cover"
               />
@@ -127,10 +122,10 @@ function CommingSoon() {
                   Equipes participantes
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  Times que fizeram parte desta edição
+                  Times que faram parte desta edição
                 </h2>
                 <p className="text-lg text-base-content/75 leading-relaxed">
-                  O torneio reuniu equipes em disputas internas e externas,
+                  O torneio está reuindo equipes em disputas internas e externas,
                   promovendo integração, espírito esportivo e troca de
                   experiências em torno da robótica educacional.
                 </p>
@@ -173,7 +168,7 @@ function CommingSoon() {
           </section>
 
           {/* ESTATÍSTICAS */}
-          <section className="rounded-[2rem] border border-base-300 bg-gradient-to-r from-[#FFA500] to-[#008080] p-6 md:p-8 text-white shadow-lg">
+          <section className="rounded-[2rem] border border-base-300 bg-gradient-to-r from-[#7f0000] to-[#008080] p-6 md:p-8 text-white shadow-lg">
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {estatisticas.map((item) => (
