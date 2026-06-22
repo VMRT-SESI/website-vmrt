@@ -5,12 +5,30 @@ import Image from "next/image";
 
 const albunsDestaque = [
   {
+    titulo: "Torneio VMRT 2026",
+    subtitulo: "Edição Externa",
+    imagem: "/albums/10.jpg",
+    link: "https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EkYDVxEPhsNCsjSShbzDY20BSOS9COmx8IgH1NgGrPliiQ?e=yq215V",
+    alt: "Álbum de fotos do Torneio VMRT 2026 externo",
+    badge: "Destaque",
+  },
+  {
+    titulo: "Torneio VMRT 2026",
+    subtitulo: "Edição Interna",
+    imagem: "/albums/9.jpg",
+    link: "https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EqD5N1pm8mNKgrCfTbxGiesBNpFBvKEvMFjGg11bBjYENw?e=u93KZC",
+    alt: "Álbum de fotos do Torneio VMRT 2026 interno",
+    badge: "Destaque",
+  },
+];
+
+const outrosAlbuns = [
+  {
     titulo: "Torneio VMRT 2025",
     subtitulo: "Edição Externa",
     imagem: "/albums/2.png",
     link: "https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EkYDVxEPhsNCsjSShbzDY20BSOS9COmx8IgH1NgGrPliiQ?e=yq215V",
     alt: "Álbum de fotos do Torneio VMRT 2025 externo",
-    badge: "Destaque",
   },
   {
     titulo: "Torneio VMRT 2025",
@@ -18,11 +36,7 @@ const albunsDestaque = [
     imagem: "/albums/3.png",
     link: "https://sesisenaispedu-my.sharepoint.com/:f:/g/personal/bruno_almeida35_portalsesisp_org_br/EqD5N1pm8mNKgrCfTbxGiesBNpFBvKEvMFjGg11bBjYENw?e=u93KZC",
     alt: "Álbum de fotos do Torneio VMRT 2025 interno",
-    badge: "Destaque",
   },
-];
-
-const outrosAlbuns = [
   {
     titulo: "Torneio VMRT 2024",
     subtitulo: "Edição Externa",

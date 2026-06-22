@@ -1,23 +1,23 @@
 import NavBar from "@/components/Navbar";
 
-const equipesInternas = ["Spider Squad", "Tecno Câmbio", "Faith and Dragons", "SBR", "Fire Dragon","Golder Experience", "Gothan Bat"];
+const equipesInternas = ["Spider Squad", "Faith and Dragons", "SBR", "Fire Dragon","Golden Experience", "Gothan Bat"];
 
 const equipesExternas = ["Asgard", "Tatubóticos", "Robonáticos", "VMRT", "Robot Hunters","TECNOBOT"];
 
 const vencedoresInterno = [
-  { categoria: "Champion’s Award", equipe: "" },
-  { categoria: "Desafio de Mesa", equipe: "" },
-  { categoria: "Projeto de Inovação", equipe: "" },
-  { categoria: "Design do Robô", equipe: "" },
-  { categoria: "Core Values", equipe: "" },
+  { categoria: "Champion’s Award", equipe: "Gothan Bat" },
+  { categoria: "Desafio de Mesa", equipe: "SBR" },
+  { categoria: "Projeto de Inovação", equipe: "Gothan Bat" },
+  { categoria: "Design do Robô", equipe: "Faith and Dragons" },
+  { categoria: "Core Values", equipe: "Golden Experience" },
 ];
 
 const vencedoresExterno = [
-  { categoria: "Champion’s Award", equipe: "" },
-  { categoria: "Desafio de Mesa", equipe: "" },
-  { categoria: "Projeto de Inovação", equipe: "" },
-  { categoria: "Design do Robô", equipe: "" },
-  { categoria: "Core Values", equipe: "" },
+  { categoria: "Champion’s Award", equipe: "Robot Hunters" },
+  { categoria: "Desafio de Mesa", equipe: "VMRT" },
+  { categoria: "Projeto de Inovação", equipe: "VMRT" },
+  { categoria: "Design do Robô", equipe: "Tatubóticos" },
+  { categoria: "Core Values", equipe: "TECHNOBOT" },
 ];
 
 const estatisticas = [
@@ -28,11 +28,11 @@ const estatisticas = [
 
 export default function Page() {
   return (
-    <CommingSoon />
+    <Torneio />
   );
 }
 
-function CommingSoon() {
+function Torneio() {
   return (
     <div className="min-h-screen bg-base-100 text-base-content">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -110,7 +110,7 @@ function CommingSoon() {
           <section className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-12 items-center">
             <div className="overflow-hidden rounded-[2rem] border border-base-300 bg-base-200 shadow-xl">
               <img
-                src="https://qcesc.org/wp-content/uploads/2025/08/image001-1024x666.jpg"
+                src="https://fspartner.no/cdn/shop/collections/FLL-3.jpg?v=1741335945"
                 alt="Desafio de mesa da temporada Unearthed"
                 className="w-full h-full max-h-[460px] object-cover"
               />
@@ -193,6 +193,80 @@ function CommingSoon() {
                   className="w-28 sm:w-36 h-auto"
                 />
               </div>
+            </div>
+          </section>
+
+          {/* VENCEDORES */}
+          <section className="space-y-8">
+            <div className="text-center space-y-3">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Resultados
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Equipes vencedoras
+              </h2>
+              <p className="text-lg text-base-content/75 max-w-3xl mx-auto">
+                Reconhecimento às equipes que se destacaram nas diferentes áreas
+                avaliadas ao longo do torneio.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              <article className="rounded-[2rem] border border-base-300 bg-base-200 p-6 md:p-8 shadow-sm">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15 text-primary text-xl">
+                    🏆
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold">Torneio Interno</h3>
+                    <p className="text-base-content/65">
+                      Resultados da disputa interna
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  {vencedoresInterno.map((item) => (
+                    <div
+                      key={item.categoria}
+                      className="rounded-2xl border border-base-300 bg-base-100 p-4"
+                    >
+                      <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+                        {item.categoria}
+                      </p>
+                      <p className="mt-1 text-lg font-bold">{item.equipe}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
+
+              <article className="rounded-[2rem] border border-base-300 bg-base-200 p-6 md:p-8 shadow-sm">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent text-xl">
+                    🥇
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold">Torneio Externo</h3>
+                    <p className="text-base-content/65">
+                      Resultados da disputa externa
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  {vencedoresExterno.map((item) => (
+                    <div
+                      key={item.categoria}
+                      className="rounded-2xl border border-base-300 bg-base-100 p-4"
+                    >
+                      <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+                        {item.categoria}
+                      </p>
+                      <p className="mt-1 text-lg font-bold">{item.equipe}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
             </div>
           </section>
 
